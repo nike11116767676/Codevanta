@@ -73,7 +73,7 @@ export default function App() {
         setSystemStatus('online');
 
         // Load error history
-        const histRes = await axios.get('http://127.0.0.1:8000/api/history');
+       const histRes = await axios.get('https://codevanta-backend-zswn.onrender.com/api/history');
         setHistoryItems(histRes.data || []);
       } catch (err) {
         console.error('Failed to connect to Codevanta backend:', err);
