@@ -1,0 +1,178 @@
+[
+  {
+    "id": "JAVA_STATEMENTS",
+    "title": "Java Statements & Semicolons",
+    "language": "java",
+    "what_happened": "The Java compiler found a statement that was not terminated properly.",
+    "why_it_happened": "Java grammar mandates that every expression statement, variable declaration, or return ends with a semicolon ';'. The compiler uses ';' as a boundary between executable commands.",
+    "wrong_example": "int a = 10\nSystem.out.println(a);",
+    "correct_example": "int a = 10;\nSystem.out.println(a);",
+    "memory_rule": "Every Java action statement ends with a semicolon: statement -> ;",
+    "quiz": {
+      "question_id": "q_java_semicolon_1",
+      "question": "Which of the following Java declarations is syntactically valid?",
+      "options": [
+        { "id": "A", "text": "int score = 100" },
+        { "id": "B", "text": "int score = 100;" },
+        { "id": "C", "text": "integer score = 100;" },
+        { "id": "D", "text": "score: int = 100" }
+      ],
+      "correct_id": "B",
+      "explanation": "Option B is correct because Java requires the primitive type 'int', variable name, assignment, and a terminating semicolon ';'."
+    }
+  },
+  {
+    "id": "JAVA_PARENTHESES",
+    "title": "Java Parentheses Balance",
+    "language": "java",
+    "what_happened": "An opening parenthesis '(' was opened but never closed before the end of the statement.",
+    "why_it_happened": "Java uses matching pairs of parentheses for method argument lists and boolean conditions in control flow structures.",
+    "wrong_example": "System.out.println(\"Hello\";",
+    "correct_example": "System.out.println(\"Hello\");",
+    "memory_rule": "Every '(' must have a matching ')' before the terminating ';'",
+    "quiz": {
+      "question_id": "q_java_paren_1",
+      "question": "What is the correct syntax to print a message to the console in Java?",
+      "options": [
+        { "id": "A", "text": "System.out.println(\"Test\";" },
+        { "id": "B", "text": "System.out.println \"Test\";" },
+        { "id": "C", "text": "System.out.println(\"Test\");" },
+        { "id": "D", "text": "print(\"Test\")" }
+      ],
+      "correct_id": "C",
+      "explanation": "Option C properly wraps the argument string in parentheses followed by the semicolon."
+    }
+  },
+  {
+    "id": "JAVA_CANNOT_FIND_SYMBOL",
+    "title": "Java Symbol Resolution & Variable Declaration",
+    "language": "java",
+    "what_happened": "The compiler encountered an identifier that was never declared in the current or parent scope.",
+    "why_it_happened": "Java is statically typed. Every variable, method, or class name must be declared and within lexical scope before it can be referenced.",
+    "wrong_example": "int count = 5;\nSystem.out.println(counter);",
+    "correct_example": "int counter = 5;\nSystem.out.println(counter);",
+    "memory_rule": "Declare first, spell exactly the same, use later.",
+    "quiz": {
+      "question_id": "q_java_symbol_1",
+      "question": "Why does Java throw 'cannot find symbol' when you use a variable named 'total'?",
+      "options": [
+        { "id": "A", "text": "'total' is a reserved keyword in Java." },
+        { "id": "B", "text": "The variable 'total' was not declared with a data type in the accessible scope." },
+        { "id": "C", "text": "Variables in Java cannot start with the letter 't'." },
+        { "id": "D", "text": "Variables cannot store numbers." }
+      ],
+      "correct_id": "B",
+      "explanation": "In Java, you must declare a variable (e.g., 'int total = 0;') before referencing it."
+    }
+  },
+  {
+    "id": "JAVA_INCOMPATIBLE_TYPES",
+    "title": "Java Type Safety & Incompatible Types",
+    "language": "java",
+    "what_happened": "Attempted to assign a value of one data type into a variable of an incompatible type.",
+    "why_it_happened": "Java enforces strict type safety. A String cannot be implicitly converted into an int or vice versa.",
+    "wrong_example": "int age = \"25\";",
+    "correct_example": "int age = 25;\n// or String age = \"25\";\n// or int age = Integer.parseInt(\"25\");",
+    "memory_rule": "Variables can only hold values that match their declared type.",
+    "quiz": {
+      "question_id": "q_java_types_1",
+      "question": "Which statement will compile without an 'incompatible types' error in Java?",
+      "options": [
+        { "id": "A", "text": "int x = \"100\";" },
+        { "id": "B", "text": "boolean flag = 1;" },
+        { "id": "C", "text": "String name = \"Codevanta\";" },
+        { "id": "D", "text": "int num = 3.14159;" }
+      ],
+      "correct_id": "C",
+      "explanation": "Option C correctly assigns a String literal to a String variable. In Java, booleans are true/false, and floating point literals require double or float."
+    }
+  },
+  {
+    "id": "PY_COMPOUND_STATEMENTS",
+    "title": "Python Compound Statements & Colons",
+    "language": "python",
+    "what_happened": "A compound statement (like 'if', 'for', 'while', 'def', or 'class') is missing a colon ':'.",
+    "why_it_happened": "In Python, a colon ':' signals the end of the header and indicates that an indented block of code follows.",
+    "wrong_example": "if x > 10\n    print(x)",
+    "correct_example": "if x > 10:\n    print(x)",
+    "memory_rule": "Header line introduces a block -> ends with ':'",
+    "quiz": {
+      "question_id": "q_py_colon_1",
+      "question": "Which Python conditional header is syntactically valid?",
+      "options": [
+        { "id": "A", "text": "if x > 5" },
+        { "id": "B", "text": "if (x > 5);" },
+        { "id": "C", "text": "if x > 5:" },
+        { "id": "D", "text": "if x > 5 then" }
+      ],
+      "correct_id": "C",
+      "explanation": "Option C is correct because Python compound statements require a trailing colon ':'."
+    }
+  },
+  {
+    "id": "PY_INDENTATION",
+    "title": "Python Indentation & Code Blocks",
+    "language": "python",
+    "what_happened": "An IndentationError occurred because a code block was not indented properly.",
+    "why_it_happened": "Python uses whitespace indentation to delimit blocks of code instead of curly braces.",
+    "wrong_example": "def calculate(a, b):\nreturn a + b",
+    "correct_example": "def calculate(a, b):\n    return a + b",
+    "memory_rule": "4 spaces indent for every nested block level.",
+    "quiz": {
+      "question_id": "q_py_indent_1",
+      "question": "How does Python define the body of a function or loop?",
+      "options": [
+        { "id": "A", "text": "By enclosing the body in curly braces { }" },
+        { "id": "B", "text": "By ending each line with 'end'" },
+        { "id": "C", "text": "By indenting statements with consistent whitespace" },
+        { "id": "D", "text": "By using BEGIN and END keywords" }
+      ],
+      "correct_id": "C",
+      "explanation": "Python strictly relies on consistent indentation (standard is 4 spaces) to mark block scope."
+    }
+  },
+  {
+    "id": "PY_NAME_ERROR",
+    "title": "Python Name Definition & Scopes",
+    "language": "python",
+    "what_happened": "Python encountered a variable name that has not been defined in local or global scope.",
+    "why_it_happened": "Variables in Python must be assigned a value before they can be evaluated or printed.",
+    "wrong_example": "total = 100\nprint(totl)",
+    "correct_example": "total = 100\nprint(total)",
+    "memory_rule": "Assign or import before referencing.",
+    "quiz": {
+      "question_id": "q_py_name_1",
+      "question": "What happens when you run 'print(my_var)' if 'my_var' was never assigned?",
+      "options": [
+        { "id": "A", "text": "It prints 'None'" },
+        { "id": "B", "text": "It prints '0'" },
+        { "id": "C", "text": "A NameError is raised" },
+        { "id": "D", "text": "It automatically creates the variable" }
+      ],
+      "correct_id": "C",
+      "explanation": "Python raises a NameError if you evaluate an identifier that does not exist in local, enclosing, global, or built-in scope."
+    }
+  },
+  {
+    "id": "JAVA_ARITHMETIC_ZERO",
+    "title": "Division by Zero in Java & Python",
+    "language": "java",
+    "what_happened": "An arithmetic division or modulo operation attempted to divide by 0.",
+    "why_it_happened": "Division by zero is mathematically undefined. In computer integer arithmetic, the processor cannot compute the quotient and signals an error.",
+    "wrong_example": "int result = 50 / 0;",
+    "correct_example": "if (denominator != 0) {\n    int result = 50 / denominator;\n}",
+    "memory_rule": "Always guard divisions: verify divisor != 0 before dividing.",
+    "quiz": {
+      "question_id": "q_div_zero_1",
+      "question": "How should a programmer guard against a division by zero error?",
+      "options": [
+        { "id": "A", "text": "Check that the divisor is not zero before executing the division." },
+        { "id": "B", "text": "Divide by -1 instead." },
+        { "id": "C", "text": "Set the numerator to 0." },
+        { "id": "D", "text": "Ignore it; computers automatically round to zero." }
+      ],
+      "correct_id": "A",
+      "explanation": "Checking that the divisor != 0 in an if-statement or handling the exception prevents abrupt program crash."
+    }
+  }
+]
