@@ -8,7 +8,7 @@ TEMP_DIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = BASE_DIR / "database" / "codevanta.db"
 
 # Execution constraints
-DEFAULT_TIMEOUT_SECONDS = 5.0
+DEFAULT_TIMEOUT_SECONDS = 30.0
 MAX_OUTPUT_LENGTH = 10000
 MAX_CODE_LENGTH = 65536
 
